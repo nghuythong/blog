@@ -1,7 +1,7 @@
 import React from 'react'
 import './Blog.css'
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';ß
+import 'react-multi-carousel/lib/styles.css';
 
 function Blog() {
     const responsive = {
