@@ -1,8 +1,7 @@
 import React from 'react'
 import './Blog.css'
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import Wrapper from '../../components/Wrapper/Wrapper';
+import 'react-multi-carousel/lib/styles.css';ß
 
 function Blog() {
     const responsive = {
