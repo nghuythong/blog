@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import Wrapper from '../../components/Wrapper/Wrapper'
 import Card from '../../components/Card/Card'

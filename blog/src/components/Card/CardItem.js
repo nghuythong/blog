@@ -11,7 +11,7 @@ function CardItem(props) {
               <img
                 className='cards__item__img'
                 alt='TravelImage'
-                src="./images/img-9.jpg"
+                src="./images/2.jpg"
               />
             </figure>
             <div className='cards__item__info'>

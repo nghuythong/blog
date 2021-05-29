@@ -1,66 +1,89 @@
 import React from 'react'
 import './Blog.css'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import Wrapper from '../../components/Wrapper/Wrapper';
 
 function Blog() {
+    const responsive = {
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 1,
+          slidesToSlide: 1 // optional, default to 1.
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2,
+          slidesToSlide: 2 // optional, default to 1.
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1,
+          slidesToSlide: 1 // optional, default to 1.
+        }
+      };
+
     return (
         <div className="blog-container">
             <h1>Núi langbiang</h1>
-                <h4>1. Huyền thoại (lịch sử)</h4>
-                    <p>_Langbiang – là hai tên ghép từ câu chuyện của chàng K’lang và nàng H'biang theo truyền thuyết của dân tộc K’Ho.</p>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="historyImg"/>
-                    <p>_Câu chuyện tình của chàng K’lang (người Lát, một nhánh của dân tộc K’Ho) và người con gái tên H'biang (người Chil, một nhánh khác của dân tộc K’Ho) đã làm xúc động bao du khách khi đặt chân đến đây. Nhà K’lang và H'biang đều ở dưới chân núi, họ tình cờ gặp nhau trong một lần lên rừng hái quả. H'biang gặp nạn và chàng K’lang đã dũng cảm cứu nàng thoát khỏi đàn sói hung dữ. Một lần gặp gỡ nhưng cả hai đã cảm mến, rồi họ đem lòng yêu nhau.</p>
-                    <p>_Nhưng do lời nguyền giữa 2 tộc người mà H'biang không thể lấy K’lang làm chồng. Vượt qua tục lệ khắt khe và lễ giáo, hai người vẫn quyết tâm đến với nhau. Họ trở thành vợ chồng rồi bỏ đến một nơi trên đỉnh núi để sinh sống. Khi H'biang bị bệnh, K’lang tìm mọi cách chữa trị nhưng không khỏi. Chàng đành quay về báo cho buôn làng để tìm cách cứu nàng.</p>
-                    <p>_Kết thúc câu chuyện, H'biang bị chết do nàng đỡ mũi tên có tẩm thuốc độc của buôn làng nhắm bắn K’lang. Đau buồn khôn xiết, K’lang đã khóc rất nhiều, nước mắt chàng tuôn thành suối lớn, ngày nay gọi là Đạ Nhim (suối khóc). Sau cái chết của hai người, cha Biang rất hối hận, đứng ra thống nhất các bộ tộc thành một dân tộc có tên là K’Ho. Từ đó các đôi nam nữ trong làng dễ dàng đến với nhau.</p>
-                    <p>_Ngọn núi cao ở làng La Ngư Thượng, nơi chàng K’lang và nàng H'biang chết được đặt lên là Lang Biang - tên ghép của đôi trai gái, để tưởng nhớ hai người và tình yêu của họ.</p>
+                <h4>Huyền thoại (lịch sử)</h4>
+                    <p>Langbiang – là hai tên ghép từ câu chuyện của chàng K’lang và nàng H'biang theo truyền thuyết của dân tộc K’Ho.</p>
+                    <img className="blog-img" src="./images/1.jpg" alt="historyImg"/>
+                    <p>Câu chuyện tình của chàng K’lang (người Lát, một nhánh của dân tộc K’Ho) và người con gái tên H'biang (người Chil, một nhánh khác của dân tộc K’Ho) đã làm xúc động bao du khách khi đặt chân đến đây. Nhà K’lang và H'biang đều ở dưới chân núi, họ tình cờ gặp nhau trong một lần lên rừng hái quả. H'biang gặp nạn và chàng K’lang đã dũng cảm cứu nàng thoát khỏi đàn sói hung dữ. Một lần gặp gỡ nhưng cả hai đã cảm mến, rồi họ đem lòng yêu nhau.</p>
+                    <p>Nhưng do lời nguyền giữa 2 tộc người mà H'biang không thể lấy K’lang làm chồng. Vượt qua tục lệ khắt khe và lễ giáo, hai người vẫn quyết tâm đến với nhau. Họ trở thành vợ chồng rồi bỏ đến một nơi trên đỉnh núi để sinh sống. Khi H'biang bị bệnh, K’lang tìm mọi cách chữa trị nhưng không khỏi. Chàng đành quay về báo cho buôn làng để tìm cách cứu nàng.</p>
+                    <p>Kết thúc câu chuyện, H'biang bị chết do nàng đỡ mũi tên có tẩm thuốc độc của buôn làng nhắm bắn K’lang. Đau buồn khôn xiết, K’lang đã khóc rất nhiều, nước mắt chàng tuôn thành suối lớn, ngày nay gọi là Đạ Nhim (suối khóc). Sau cái chết của hai người, cha Biang rất hối hận, đứng ra thống nhất các bộ tộc thành một dân tộc có tên là K’Ho. Từ đó các đôi nam nữ trong làng dễ dàng đến với nhau.</p>
+                    <p>Ngọn núi cao ở làng La Ngư Thượng, nơi chàng K’lang và nàng H'biang chết được đặt lên là Lang Biang - tên ghép của đôi trai gái, để tưởng nhớ hai người và tình yêu của họ.</p>
         
-                <h4>2. Giới thiệu về núi</h4>
-                    <p>_Núi Langbiang Đà Lạt có lẽ là một trong những cái tên rất quen thuộc đối với rất nhiều quý du khách. Dù là những du khách chưa có dịp đặt chân đến với Đà Lạt. Hay những du khách đã có dịp đến với nơi đây rồi. Hoặc là những du khách đến với Thành phố ngàn hoa xinh đẹp này rất nhiều lần đi chăng nữa. Thì có lẽ núi Langbiang là một trong những địa điểm không thể nào bỏ qua được.</p>
-                    <p>_Có lẽ cũng chính vì vậy mà Langbiang được quý du khách trong và ngoài nước. Bình chọn là 1 trong 5 địa điểm du lịch tuyệt vời nhất tại Đà Lạt. Không những vậy nơi đây còn được mệnh danh là nóc nhà của Đà Lạt. Cho nên hầu hết tất cả quý du khách khi lựa chọn đến với Đà Lạt để tham quan và du lịch. Cũng đều muốn một lần đặt chân đến với ngọn núi này. Để khám phá vẻ đẹp, cảnh sắc thiên nhiên thơ mộng,…</p>
-                    <p>_Núi Langbiang Đà Lạt là một trong những địa điểm tham quan, du lịch lâu đời bậc nhất tại Thành phố Đà Lạt. Không những vậy, ngọn núi này được mệnh danh là “nóc nhà của Đà Lạt”. Đứng trên đỉnh núi quý du khách có thể ngắm nhìn toàn cảnh Thành phố sương mù ở phía xa xa. Với một khung cảnh tuyệt đẹp, rất thơ mộng và lãng mạn.</p>
-                    <p>_Không chỉ có quan cảnh đẹp, thơ mộng và lung linh. Mà ngọn núi này còn gắn liền với những truyền thuyết. Gắn liền với sự biểu trưng cho tình yêu bất diệt. Đặc biệt đó là truyền thuyết của người đồng bào dân tộc K’ho. Một truyền thuyết gắn liền với một tình yêu thủy chung son sắc của cặp đôi trai tài gái sắc. Đó chính là chàng K Lang và nàng H Biang.</p>
-                    <p>_Cho nên ngày nay khi du khách đến với nơi đây dù là tham quan hay đi nghỉ dưỡng. Thì cũng đều được nghe kể về câu truyện, về truyền thuyết của ngọn núi này.</p>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
+                <h4>Giới thiệu về núi</h4>
+                    <p>Núi Langbiang Đà Lạt có lẽ là một trong những cái tên rất quen thuộc đối với rất nhiều quý du khách. Dù là những du khách chưa có dịp đặt chân đến với Đà Lạt. Hay những du khách đã có dịp đến với nơi đây rồi. Hoặc là những du khách đến với Thành phố ngàn hoa xinh đẹp này rất nhiều lần đi chăng nữa. Thì có lẽ núi Langbiang là một trong những địa điểm không thể nào bỏ qua được.</p>
+                    <p>Có lẽ cũng chính vì vậy mà Langbiang được quý du khách trong và ngoài nước. Bình chọn là 1 trong 5 địa điểm du lịch tuyệt vời nhất tại Đà Lạt. Không những vậy nơi đây còn được mệnh danh là nóc nhà của Đà Lạt. Cho nên hầu hết tất cả quý du khách khi lựa chọn đến với Đà Lạt để tham quan và du lịch. Cũng đều muốn một lần đặt chân đến với ngọn núi này. Để khám phá vẻ đẹp, cảnh sắc thiên nhiên thơ mộng,…</p>
+                    <p>Núi Langbiang Đà Lạt là một trong những địa điểm tham quan, du lịch lâu đời bậc nhất tại Thành phố Đà Lạt. Không những vậy, ngọn núi này được mệnh danh là “nóc nhà của Đà Lạt”. Đứng trên đỉnh núi quý du khách có thể ngắm nhìn toàn cảnh Thành phố sương mù ở phía xa xa. Với một khung cảnh tuyệt đẹp, rất thơ mộng và lãng mạn.</p>
+                    <p>Không chỉ có quan cảnh đẹp, thơ mộng và lung linh. Mà ngọn núi này còn gắn liền với những truyền thuyết. Gắn liền với sự biểu trưng cho tình yêu bất diệt. Đặc biệt đó là truyền thuyết của người đồng bào dân tộc K’ho. Một truyền thuyết gắn liền với một tình yêu thủy chung son sắc của cặp đôi trai tài gái sắc. Đó chính là chàng K Lang và nàng H Biang.</p>
+                    <p>Cho nên ngày nay khi du khách đến với nơi đây dù là tham quan hay đi nghỉ dưỡng. Thì cũng đều được nghe kể về câu truyện, về truyền thuyết của ngọn núi này.</p>
+                    <img className="blog-img" src="./images/2.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/3.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/4.jpg" alt="introImg"/>
 
-                <h4>3. Núi Langbiang có gì hấp dẫn?</h4>
-                    <p>_Tại Langbiang có rất nhiều địa điểm để tham quan. Những địa điểm ở đây rất độc đáo gần như chỉ có ở Đà Lạt. Không chỉ thế nơi đây còn có nhiều trò chơi cho những ai ưa cảm giác mạnh lựa chọn.</p>
-                    <p>_Ngoài ra khi đến đỉnh núi này các bạn còn được hòa mình vào thiên nhiên núi rừng. Có thể ngắm trời, ngắm mây và còn ngắm được toàn cảnh thành phố Đà Lạt.</p>
-                    <p>_Sau khi leo được lên tới đỉnh Ra-đa của Langbiang. Tại nơi đây với nhiều khu nghỉ dưỡng cao cấp cho các bạn lựa chọn. Cùng với những dịch vụ hữu ích cho du khách. Ở đây có riêng một khu để bạn cắm trại và nghỉ qua đêm. Ở đỉnh núi này vào ban đêm rất tuyệt đó các bạn ơi.</p>
-                    <p>_Các bạn có biết cái cảm giác ngồi bên ánh lửa, uống chút rượu cần. Nghe những tiếng nhạc du dương vang lên từ các nhạc cụ cổ của người Lạch. Reo hò, ca hát, nhảy múa cùng nhau suốt đêm. Khi đêm xuống các cô gái người Lạch ngồi dệt thổ cẩm bên ánh đèn. Cái cảm giác ấy tuyệt vời lắm đó các bạn.</p>
-                    <p>_Các bạn có thể mua những loại đồ dùng của người Lạch tạo đây. Như chiếc gùi, tại đây ta có thể sắm cho mình những mảnh thổ cẩm đẹp. Với nhiều màu sắc khác nhau để trang trí cho gia đình hoặc khoác lên cho bản thân.</p>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
+                <h4>Núi Langbiang có gì hấp dẫn?</h4>
+                    <p>Tại Langbiang có rất nhiều địa điểm để tham quan. Những địa điểm ở đây rất độc đáo gần như chỉ có ở Đà Lạt. Không chỉ thế nơi đây còn có nhiều trò chơi cho những ai ưa cảm giác mạnh lựa chọn.</p>
+                    <p>Ngoài ra khi đến đỉnh núi này các bạn còn được hòa mình vào thiên nhiên núi rừng. Có thể ngắm trời, ngắm mây và còn ngắm được toàn cảnh thành phố Đà Lạt.</p>
+                    <p>Sau khi leo được lên tới đỉnh Ra-đa của Langbiang. Tại nơi đây với nhiều khu nghỉ dưỡng cao cấp cho các bạn lựa chọn. Cùng với những dịch vụ hữu ích cho du khách. Ở đây có riêng một khu để bạn cắm trại và nghỉ qua đêm. Ở đỉnh núi này vào ban đêm rất tuyệt đó các bạn ơi.</p>
+                    <p>Các bạn có biết cái cảm giác ngồi bên ánh lửa, uống chút rượu cần. Nghe những tiếng nhạc du dương vang lên từ các nhạc cụ cổ của người Lạch. Reo hò, ca hát, nhảy múa cùng nhau suốt đêm. Khi đêm xuống các cô gái người Lạch ngồi dệt thổ cẩm bên ánh đèn. Cái cảm giác ấy tuyệt vời lắm đó các bạn.</p>
+                    <p>Các bạn có thể mua những loại đồ dùng của người Lạch tạo đây. Như chiếc gùi, tại đây ta có thể sắm cho mình những mảnh thổ cẩm đẹp. Với nhiều màu sắc khác nhau để trang trí cho gia đình hoặc khoác lên cho bản thân.</p>
+                    <img className="blog-img" src="./images/5.jpg" alt="introImg"/>
 
-                <h4>4. Các trò chơi được ưa thích ở núi Langbiang</h4>
-                    <h5>Đi xe Jeep</h5>
+                <h4>Các trò chơi được ưa thích ở núi Langbiang</h4>
+                    <strong>Đi xe Jeep</strong>
                     <p>Từ chân núi LangBiang, du khách sẽ đi xe Jeep lên đỉnh núi để tham gia nhiều hoạt động vui chơi giải trí khác. Giá vé thuê một chiếc xe Jeep là 300.000 đồng/xe cho cả vòng đi và vòng về.  Một xe có thể đi từ 5- 6 người, bạn có thể đi ghép với những người khác hoặc thuê nguyên xe để đi.</p>
 
-                    <h5>Dù lượn</h5>
+                    <strong>Dù lượn</strong>
                     <p>Đỉnh LangBiang Đà Lạt có gì? Câu trả lời là ở đây có rất nhiều hoạt động vui chơi và dịch vụ tiện lợi. Một trong những trò chơi mạo hiểm được nhiều du khách yêu thích nhất khi tới đây là trò dù lượn. Điểm bắt đầu trò chơi là đỉnh Rada và kết thúc tại hồ Đan Kia.</p>
 
-                    <h5>Leo núi chinh phục đỉnh đồi Rada, đỉnh núi Bà</h5>
+                    <strong>Leo núi chinh phục đỉnh đồi Rada, đỉnh núi Bà</strong>
                     <p>Đây là trò chơi đòi hỏi người chơi có thể lực tốt và sự kiên trì cao. Đường lên đỉnh núi khá khó đi nhưng bù lại cảnh sắc rất đẹp.</p>
 
-                    <h5>Ăn uống, vui chơi dưới chân núi</h5>
+                    <strong>Ăn uống, vui chơi dưới chân núi</strong>
                     <p>Dưới chân núi có rất nhiều dịch vụ ăn uống, vui chơi với đa dạng các món ăn. Du khách có thể chọn riêng biệt tour du lịch Đà Lạt 1 ngày trải nghiệm không gian văn hóa cồng chiêng, được đốt lửa trại, uống rượu cần và nghe tiếng cồng chiêng.</p>
 
-                    <h5>Chụp hình checkin trên đỉnh núi</h5>
+                    <strong>Chụp hình checkin trên đỉnh núi</strong>
                     <p>Trên đỉnh núi, du khách có thể cưỡi ngựa và chụp hình hoặc ghé thăm vườn hoa nơi có tượng Lang và Biang để checkin.</p>
 
-                    <h5>Uống cafe, ngắm mây, cưỡi ngựa</h5>
+                    <strong>Uống cafe, ngắm mây, cưỡi ngựa</strong>
                     <p>Nếu bạn đã có chút thấm mệt khi tham quan núi LangBiang, bạn có thể ghé đến quán cà phê,vừa uống cafe vừa ngắm thành phố Đà Lạt bên dưới.</p>
 
-                    <h5>Mua sắm đặc sản, đồ lưu niệm</h5>
+                    <strong>Mua sắm đặc sản, đồ lưu niệm</strong>
                     <p>Du khách có thể mua những thức ăn đặc sản và đồ lưu niệm Đà Lạt cho bạn bè và người thân tại các quầy hàng dưới chân núi LangBiang.</p>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
+                    <Carousel responsive={responsive} itemClass='carousel-item'>
+                    <img className="blog-img" src="./images/6.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/7.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/8.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/9.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/10.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/11.jpg" alt="introImg"/>
+                    </Carousel>
 
-                <h4>5. Review về núi</h4>
-                    <p>_Sau đây là một bài viết từ một vị khách du lịch đã nêu cảm nhận sau chuyến tham quan núi Langbiang, chúng tôi xin chia sẻ đến các bạn : “CẢM NHẬN LANGBIANG”</p>
+                <h4>Review về núi</h4>
+                    <p>Sau đây là một bài viết từ một vị khách du lịch đã nêu cảm nhận sau chuyến tham quan núi Langbiang, chúng tôi xin chia sẻ đến các bạn : “CẢM NHẬN LANGBIANG”</p>
                     <p>Sau một đêm dài ngon giấc trong bầu không khí se lanh, dịu dàng của màn đêm Đà Lạt yên tĩnh, mở choàng mắt đã thấy ánh nắng ban mai chiếu vào phòng chói chang (vì căn phòng của mấy anh em nhà mình có cửa mở về hướng phía Đông).</p>
                     <p>Bước ra khỏi phòng đã thấy bà chủ khách sạn đang tưới hoa trên ban công. Có những loại hoa màu tim tím, sang sáng mà mình cũng chẳng biết tên là hoa gì nữa. Nhưng cần gì phải bận tâm đâu, vì mới buổi sớm vừa ra khỏi cửa đã thấy màu hoa, mùi hoa cũng đủ đem đến cho mình một cảm giác vui vui, là lạ rồi!</p>
                     <p>Dự định ban đầu trong lịch trình là 7h phải ăn sáng xong. Ấy vậy mà do mấy cô nàng còn phải “vôi ve” hơi lâu nên mãi đến 7h20 mới xuất phát được. Ăn sáng ở nhà hàng có cái tên quen quen: Tâm Châu. Không biết là do nhiều người thích một cái tên hay là cùng một hệ thống nhà hàng của ông chủ mà có sự trùng hợp này?</p>
@@ -88,30 +111,32 @@ function Blog() {
                         Chúng tôi lấy tiền xe thôi
                         Còn các khoản khác, chịu thôi, đỡ tiền!” 
                     </p>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/12.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/13.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/14.jpg" alt="introImg"/>
 
-                <h4>6. Kinh nghiệm tham quan núi</h4>
+                <h4>Kinh nghiệm tham quan núi</h4>
                     <p>Bạn chuẩn bị sức khỏe, nạp đầy năng lượng. Nhớ mang theo nước uống bởi đi bộ leo núi rất xa và khí hậu núi cao sẽ rất khắc nghiệt.</p>
                     <p>Cần lên lịch trình leo núi từ sáng sớm là lý tưởng nhất. Bởi bạn sẽ chủ động được thời gian và có tâm thế tốt nhất cho hành trình.</p>
                     <p>Trang phục leo núi cần gọn gàng. Cần mang thêm áo ấm và đôi giày có độ bám tốt, bao tay, nón đội đầu.</p>
                     <p>Hành lý mang theo cần chuẩn bị sao cho đầy đủ và nhẹ nhất có thể. Một số vật dụng quan trọng không thể thiếu: điện thoại định vị GPS, bật lửa, dao, gậy, đồ dùng sơ cứu…</p>
                     <p>Nên đi theo đội nhóm để hỗ trợ lẫn nhau mỗi khi gặp thử thách, khó khăn</p>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/15.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/16.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/17.jpg" alt="introImg"/>
 
-                <h4>7. Một số hình ảnh đẹp </h4>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
-                    <img className="blog-img" src="./images/img-9.jpg" alt="introImg"/>
+                <h4>Một số hình ảnh đẹp </h4>
+                <Carousel responsive={responsive} itemClass='carousel-item'>
+                    <img className="blog-img" src="./images/18.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/19.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/20.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/21.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/22.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/23.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/24.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/25.jpg" alt="introImg"/>
+                    <img className="blog-img" src="./images/26.jpg" alt="introImg"/>
+                </Carousel>
 
         </div>
     )

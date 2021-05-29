@@ -5,8 +5,7 @@ import "./Wrapper.css"
 
 export default function Wrapper() {
     return (
-        <div
-         className="wrapper-container">
+        <div className="wrapper-container">
             <video src="/videos/video-1.mp4" autoPlay loop muted />
             <h1>ADVENTURE AWAITS</h1>
             <p>What are you waiting for?</p>

@@ -9,7 +9,7 @@ function Card() {
             <div className="cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__items">
-                        <CardItem text="Explore the hidden water" label="Adventure" path="/blogs"/>
+                        <CardItem text="Núi Langbiang Đà Lạt – kinh nghiệm hữu ích nhất khi muốn chinh phục ngon núi này" label="Adventure" path="/blogs"/>
                     </ul>
                 </div>
             </div>
