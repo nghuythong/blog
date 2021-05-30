@@ -44,7 +44,7 @@ function Navbar(props) {
           <ul className={clickMenu ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
+                Trang Chủ
               </Link>
             </li>
             <li className='nav-item'>
@@ -53,7 +53,7 @@ function Navbar(props) {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Blog
+                Bài Viết
               </Link>
  
             </li>
@@ -63,7 +63,7 @@ function Navbar(props) {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Services
+                Dịch Vụ
               </Link>
             </li>
           </ul>

@@ -8,42 +8,41 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
-          Join the Adventure newsletter to receive our best vacation deals
+          Kết Nối Với Chúng Tôi
         </p>
-        <p className='footer-subscription-text'>
+        {/* <p className='footer-subscription-text'>
           You can unsubscribe at any time.
-        </p>
+        </p> */}
         <div className='input-areas'>
           <form>
             <input
               className='footer-input'
               name='email'
               type='email'
-              placeholder='Your Email'
+              placeholder='Email Của Bạn'
             />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
+            <Button buttonStyle='btn--outline'>Đăng Ký</Button>
           </form>
         </div>
       </section>
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
+            <h2>Thông Tin</h2>
+            <Link to='/'>Huyền Thoại</Link>
+            <Link to='/'>Hấp Dẫn</Link>
+            <Link to='/'>Trò Chơi</Link>
+            <Link to='/'>Review</Link>
+            <Link to='/'>Kinh Nghiệm</Link>
+            <Link to='/'>Hình Ảnh</Link>
           </div>
           <div class='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
+            <h2>Liên Hệ</h2>
+            <Link to='/'>Gmail: langbiang@gmail.com</Link>
+            <Link to='/'>Phone: 0925553753</Link>
           </div>
         </div>
-        <div className='footer-link-wrapper'>
+        {/* <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/'>Submit Video</Link>
@@ -58,13 +57,13 @@ function Footer() {
             <Link to='/'>Youtube</Link>
             <Link to='/'>Twitter</Link>
           </div>
-        </div>
+        </div> */}
       </div>
       <section class='social-media'>
         <div class='social-media-wrap'>
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-              TRVL
+              OLALA
               <i class='fab fa-typo3' />
             </Link>
           </div>
