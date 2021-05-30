@@ -19,7 +19,7 @@ function Footer() {
               className='footer-input'
               name='email'
               type='email'
-              placeholder='Email Của Bạn'
+              placeholder='Email'
             />
             <Button buttonStyle='btn--outline'>Đăng Ký</Button>
           </form>

@@ -20,8 +20,7 @@
   }
   
   .footer-subscription > p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-      'Lucida Sans', Arial, sans-serif;
+    font-family: 'Segoe UI','Open Sans', 'Helvetica Neue', 'sans-serif';
   }
   
   .footer-subscription-heading {
@@ -64,6 +63,7 @@
     text-align: left;
     width: 250px;
     box-sizing: border-box;
+    font-family: 'Segoe UI','Open Sans', 'Helvetica Neue', 'sans-serif'
   }
   
   .footer-link-items h2 {
