@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Blog.css'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -21,6 +21,10 @@ function Blog() {
           slidesToSlide: 1 // optional, default to 1.
         }
       };
+
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [])
 
     return (
         <div className="blog-container">
